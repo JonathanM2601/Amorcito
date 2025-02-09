@@ -1,0 +1,82 @@
+body {
+    background: linear-gradient(45deg, #ff99cc, #ff6699, #ff3366, #ff0033);
+    background-size: 300% 300%;
+    animation: moverFondo 6s ease infinite;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Animación del fondo */
+@keyframes moverFondo {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
+}
+
+h1 {
+    color: red;
+}
+
+.mensaje {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.galeria img {
+    width: 100px;
+    height: auto;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.botones button {
+    padding: 10px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#yes {
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+#no {
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    position: absolute;
+}
+
+/* Corazones cayendo */
+.corazon {
+    position: absolute;
+    color: red;
+    font-size: 20px;
+    animation: caer 4s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes caer {
+    0% { transform: translateY(-10vh); opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+}
